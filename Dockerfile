@@ -29,4 +29,4 @@ RUN crontab /etc/cron.d/app-cron
 RUN touch /var/log/cron.log
 
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
+CMD node index.js >> /var/log/cron.log 2>&1 && cron && tail -f /var/log/cron.log
