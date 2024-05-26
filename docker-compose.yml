@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  active-developer-badge:
+    build: .
+    container_name: active-developer-badge
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
